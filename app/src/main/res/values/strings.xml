@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">The diet pal</string>
+    <string name="open_drawer">1</string>
+    <string name="close_drawer">0</string>
+
+    <string-array name="spinner_items">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <!-- Add more items as needed -->
+    </string-array>
+</resources>

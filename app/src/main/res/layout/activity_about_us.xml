@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activities.AboutUsActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:elevation="5dp"
+        android:foregroundTint="@color/white"
+        app:elevation="5dp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:foregroundTint="@color/white"
+            android:id="@+id/toolbar"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+            android:layout_width="match_parent"
+            android:background="@color/light_blue_600"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="About Us"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    style="@style/largeBtnStyle"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:fitsSystemWindows="true"
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/app_icon"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="
+Welcome to The Diet Pal!
+\nQuestions, feedback, or suggestions? Our dedicated support team is here to help.
+\nReach out to us, and we'll get back to you promptly.
+\nPhone number: 96685601
+\nEmail: 23901253@majancollege.edu.om
+\nThank you for choosing The Diet Pal for your wellness journey!
+ \nJoin us on this journey to a balanced and nourished life!
+"/>
+    </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationbar"
+            android:layout_width="wrap_content"
+            app:menu="@menu/side_menu"
+            android:layout_marginVertical="1dp"
+            app:headerLayout="@layout/headerlayout"
+            android:layout_gravity="start"
+            android:background="@drawable/rounded_bg_navigation_drawer"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            android:layout_height="match_parent"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

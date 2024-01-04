@@ -1,0 +1,21 @@
+<!-- res/menu/menu_main.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/editBtn"
+        android:title="Edit Record"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/contactUs"
+        android:title="Contact Us"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/singout"
+        android:title="Sign Out"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <!-- Add more items as needed -->
+</menu>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activities.MBICalculatorActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:elevation="5dp"
+        android:foregroundTint="@color/white"
+        app:elevation="5dp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:foregroundTint="@color/white"
+            android:id="@+id/toolbar"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+            android:layout_width="match_parent"
+            android:background="@color/light_blue_600"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="BMI Calculator"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    style="@style/largeBtnStyle"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:fitsSystemWindows="true"
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="30dp">
+            <EditText
+                android:id="@+id/editTextWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:background="@drawable/round_border_bg"
+                android:hint="Enter Weight (kg)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/editTextHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextWeight"
+                android:background="@drawable/round_border_bg"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="16dp"
+                android:hint="Enter Height (m)"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/buttonCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextHeight"
+                android:layout_marginTop="16dp"
+                android:text="Calculate BMI" />
+
+            <TextView
+                android:id="@+id/textViewResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonCalculate"
+
+                android:layout_marginTop="16dp"
+                android:text="BMI: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewClassification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewResult"
+                android:layout_marginTop="16dp"
+                android:text="Classification: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewBFP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewClassification"
+                android:layout_marginTop="8dp"
+                android:text="Body Fat Percentage: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewBMR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewBFP"
+                android:layout_marginTop="8dp"
+                android:text="Basal Metabolic Rate (BMR): "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewLBM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewBMR"
+                android:layout_marginTop="8dp"
+                android:text="Lean Body Mass (LBM): "
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationbar"
+            android:layout_width="wrap_content"
+            app:menu="@menu/side_menu"
+            android:layout_marginVertical="1dp"
+            app:headerLayout="@layout/headerlayout"
+            android:layout_gravity="start"
+            android:background="@drawable/rounded_bg_navigation_drawer"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            android:layout_height="match_parent"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

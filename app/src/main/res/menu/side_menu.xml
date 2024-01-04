@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="My Profile" />
+    <item
+        android:id="@+id/calorieTracker"
+        android:icon="@drawable/baseline_track_changes_24"
+        android:title="Calorie Tracker" />
+    <item
+        android:id="@+id/mealTracker"
+        android:icon="@drawable/baseline_restaurant_24"
+        android:title="Meal Tracker " />
+    <item
+        android:id="@+id/bmi"
+        android:icon="@drawable/baseline_calculate_24"
+        android:title="BMI Calculator" />
+    <item
+        android:id="@+id/workout"
+        android:icon="@drawable/baseline_downhill_skiing_24"
+        android:title="Workout Tracker" />
+    <item
+        android:id="@+id/aboutus"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Contact Us" />
+    <item
+        android:id="@+id/contactus"
+        android:icon="@drawable/baseline_contact_mail_24"
+        android:title="About Us" />
+</menu>
